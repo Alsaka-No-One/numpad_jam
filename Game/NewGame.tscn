@@ -1,36 +1,171 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Game/return_to_title.gd" type="Script" id=1]
+[ext_resource path="res://ressource/sprites/default_inventory_background.png" type="Texture" id=1]
+[ext_resource path="res://ressource/sprites/selected_halo.png" type="Texture" id=2]
+[ext_resource path="res://Game/NewGame.gd" type="Script" id=3]
 
-[node name="NewGame" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 1 )
+[sub_resource type="StyleBoxTexture" id=1]
+
+[node name="NumpadSays" type="Control"]
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 244.667
+margin_top = 171.544
+margin_right = 451.667
+margin_bottom = 283.544
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 584.0
-margin_top = 341.0
-margin_right = 696.0
-margin_bottom = 379.0
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 502.0
+margin_top = 246.0
+margin_right = 822.0
+margin_bottom = 473.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 112.0
-margin_bottom = 14.0
-text = "New Game Scene"
+[node name="numkey 7" type="Panel" parent="GridContainer"]
+margin_right = 54.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 54, 54 )
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 18.0
+[node name="numkey 8" type="Panel" parent="GridContainer"]
+margin_left = 58.0
 margin_right = 112.0
-margin_bottom = 38.0
-text = "back"
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+margin_bottom = 54.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 9" type="Panel" parent="GridContainer"]
+margin_left = 116.0
+margin_right = 170.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 4" type="Panel" parent="GridContainer"]
+margin_top = 58.0
+margin_right = 54.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 5" type="Panel" parent="GridContainer"]
+margin_left = 58.0
+margin_top = 58.0
+margin_right = 112.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 6" type="Panel" parent="GridContainer"]
+margin_left = 116.0
+margin_top = 58.0
+margin_right = 170.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 1" type="Panel" parent="GridContainer"]
+margin_top = 116.0
+margin_right = 54.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 2" type="Panel" parent="GridContainer"]
+margin_left = 58.0
+margin_top = 116.0
+margin_right = 112.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="numkey 3" type="Panel" parent="GridContainer"]
+margin_left = 116.0
+margin_top = 116.0
+margin_right = 170.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="je sais pas pourquoi c\'est la aled" type="Panel" parent="GridContainer"]
+margin_top = 174.0
+margin_right = 54.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 54, 54 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="numkey 0" type="Panel" parent="GridContainer"]
+margin_left = 58.0
+margin_top = 174.0
+margin_right = 112.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 54, 54 )
+
+[node name="halo_8" type="Sprite" parent="."]
+visible = false
+position = Vector2( 587.438, 270.568 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_0" type="Sprite" parent="."]
+visible = false
+position = Vector2( 589.328, 446.327 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 644.135, 390.26 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 588.068, 388.371 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 531.372, 386.481 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_6" type="Sprite" parent="."]
+visible = false
+position = Vector2( 645.395, 331.674 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 587.438, 327.264 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 530.742, 330.414 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_7" type="Sprite" parent="."]
+visible = false
+position = Vector2( 526.332, 272.458 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="halo_9" type="Sprite" parent="."]
+visible = false
+position = Vector2( 644.135, 273.088 )
+scale = Vector2( 0.288833, 0.298677 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
