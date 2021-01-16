@@ -9,31 +9,31 @@ func _process(delta):
 		if (Input.is_action_just_released("input_0")):
 			$halo_0.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_1")):
+		elif (Input.is_action_just_released("input_1")):
 			$halo_1.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_2")):
+		elif (Input.is_action_just_released("input_2")):
 			$halo_2.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_3")):
+		elif (Input.is_action_just_released("input_3")):
 			$halo_3.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_4")):
+		elif (Input.is_action_just_released("input_4")):
 			$halo_4.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_5")):
+		elif (Input.is_action_just_released("input_5")):
 			$halo_5.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_6")):
+		elif (Input.is_action_just_released("input_6")):
 			$halo_6.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_7")):
+		elif (Input.is_action_just_released("input_7")):
 			$halo_7.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_8")):
+		elif (Input.is_action_just_released("input_8")):
 			$halo_8.visible = true
 			$Timer.start(0.5)
-		if (Input.is_action_just_released("input_9")):
+		elif (Input.is_action_just_released("input_9")):
 			$halo_9.visible = true
 			$Timer.start(0.5)
 #	var switcher = {
