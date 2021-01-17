@@ -115,10 +115,10 @@ func playerInput():
 
 func _process(_delta):
 	var isSuccess = false
-	if playerTurn == false:
+	if playerTurn == false && $Timer.is_stopped():
 		if showSequence() == true:
 			seqNumber = 0
-	else:
+	elif playerTurn == true:
 		isSuccess = playerInput()
 	if isSuccess == true:
 		rng.randomize()
