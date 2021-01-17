@@ -7,6 +7,10 @@
 [sub_resource type="StyleBoxTexture" id=1]
 
 [node name="NumpadSays" type="Control"]
+margin_left = 367.05
+margin_top = 163.925
+margin_right = 367.05
+margin_bottom = 163.925
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
