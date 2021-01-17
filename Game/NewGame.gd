@@ -7,6 +7,7 @@ var seq = [
 ]
 var playerTurn = false
 var playerPosSeq = 0
+const MAX_LEN_SEQ = 7
 
 func _ready():
 	halos = [
@@ -53,6 +54,7 @@ func checkPlayerInput(number):
 			playerPosSeq = 0
 			return true
 	else:
+		playerPosSeq = 0
 		for num in seq:
 			num[1] = 0
 		playerTurn = false
@@ -120,6 +122,8 @@ func _process(_delta):
 			seqNumber = 0
 	elif playerTurn == true:
 		isSuccess = playerInput()
+	if len(seq) == MAX_LEN_SEQ && isSuccess == true && playerTurn == false:
+		get_tree().change_scene("res://Game/quit.tscn")
 	if isSuccess == true:
 		rng.randomize()
 		addNumberToSequence()

@@ -59,6 +59,7 @@ alignment = 1
 [node name="New GameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_right = 1920.0
 margin_bottom = 60.0
+scene_to_load = "res://Game/World.tscn"
 
 [node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
 margin_top = 80.0
